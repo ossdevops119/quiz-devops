@@ -18,13 +18,13 @@ def hello():
 disabled</i>'''
     
     html = '''<h3>Hello, {world}!</h3
-                <h4>Hello, {name}. </h4>
+                <h4>Hello, {name}. </h4><br/></hr>
                 <b>Employee ID</b> {emp_id}<br/>
                 <b>Hostname:</b> {hostname}<br/>
                 <b>Visits:</b> {visits}'''
     return html.format(
-            world=os.getenv('WORLD', 'OSS-LAB-Docker-World'),
-            name=os.getenv('NAME', 'Test'),
+            world=os.getenv('WORLD', '-'),
+            name=os.getenv('NAME', '-'),
             emp_id=os.getenv('EMP_ID', '-'),
             hostname=socket.gethostname(),
             visits=visits)

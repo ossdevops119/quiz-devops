@@ -3,9 +3,11 @@ WORKDIR /app
 COPY . /app 
 RUN pip install --root-user-action=ignore --upgrade pip
 RUN pip install --root-user-action=ignore --trusted-host pypi.python.org -r requirements.txt
-EXPOSE 8081
+#### config port to mathc application
+EXPOSE XXXX
 ENV WORLD "OSS-LAB-Docker"
-
-ENV EMP_ID "0272"	 
-ENV NAME "Donchayut"	 
+### Input your ID
+ENV EMP_ID "XXXX"
+### Input your Name	 
+ENV NAME "<< Name Surname >>"	 
 CMD ["python", "app.py"]
